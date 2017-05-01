@@ -1,0 +1,11 @@
+/** 
+ * 
+ */
+package ^capacity
+/** 
+ * @author AG
+ * 
+ */
+capacity MoveBody {
+	def move(linear : Vector2f, angular : float)
+}

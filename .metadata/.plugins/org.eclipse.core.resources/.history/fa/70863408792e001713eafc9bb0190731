@@ -1,0 +1,14 @@
+/** 
+ * 
+ */
+package ^capacity
+
+import fr.utbm.info.ia51.framework.math.Vector2f
+
+/** 
+ * @author AG
+ * 
+ */
+capacity Alarm {
+	def emitAlarm()
+}

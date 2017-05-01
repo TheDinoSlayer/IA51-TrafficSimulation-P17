@@ -1,0 +1,12 @@
+/** 
+ * 
+ */
+package ^agent
+
+/** 
+ * @author AG
+ * 
+ */
+agent Bus extends Vehicle {
+	
+}

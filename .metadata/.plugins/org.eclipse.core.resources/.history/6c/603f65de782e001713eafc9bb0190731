@@ -1,0 +1,15 @@
+/** 
+ * 
+ */
+package ^skill
+
+import ^capacity.MoveBody
+import java.util.UUID
+
+/** 
+ * @author AG
+ * 
+ */
+skill InfluenceBasedSkill implements MoveBody {
+	var envID : UUID
+}

@@ -1,0 +1,14 @@
+/** 
+ * 
+ */
+package ^skill
+
+import ^capacity.MoveBody
+
+/** 
+ * @author AG
+ * 
+ */
+skill InfluenceBasedSkill implements MoveBody {
+	var envID : UUID
+}

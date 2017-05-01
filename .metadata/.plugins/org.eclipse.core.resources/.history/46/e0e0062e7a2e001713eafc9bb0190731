@@ -1,0 +1,16 @@
+/** 
+ * 
+ */
+package ^agent
+
+import ^capacity.Alarm
+import ^capacity.MoveBody
+
+/** 
+ * @author AG
+ * 
+ */
+agent Vehicle {
+	uses Alarm
+	uses MoveBody
+}

@@ -1,0 +1,21 @@
+/** 
+ * 
+ */
+package ^skill
+
+import ^capacity.MoveBody
+import java.util.UUID
+import fr.utbm.info.ia51.framework.math.Vector2f
+
+/** 
+ * @author AG
+ * 
+ */
+skill InfluenceBasedSkill implements MoveBody {
+	var envID : UUID
+	
+	override move(linear : fr.utbm.info.ia51.framework.math.Vector2f, angular : float) {
+			
+	}
+	
+}

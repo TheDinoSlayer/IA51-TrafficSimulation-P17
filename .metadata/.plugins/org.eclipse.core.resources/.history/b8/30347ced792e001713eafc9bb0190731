@@ -1,0 +1,16 @@
+/** 
+ * 
+ */
+package ^skill
+
+import ^capacity.Alarm
+/** 
+ * @author AG
+ * 
+ */
+skill PriorityAlarm implements Alarm {
+
+	override emitAlarm {
+		
+	}
+}
