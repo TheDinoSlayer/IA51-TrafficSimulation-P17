@@ -1,6 +1,7 @@
 package capacity;
 
 import fr.utbm.info.ia51.framework.math.Vector2f;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.core.AgentTrait;
 import io.sarl.lang.core.Capacity;
@@ -10,6 +11,7 @@ import io.sarl.lang.core.Capacity;
  */
 @FunctionalInterface
 @SarlSpecification("0.5")
+@SarlElementType(17)
 @SuppressWarnings("all")
 public interface MoveBody extends Capacity {
   public abstract void move(final Vector2f linear, final float angular);

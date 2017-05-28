@@ -1,0 +1,23 @@
+/** 
+ * 
+ */
+package environment
+
+import fr.utbm.info.ia51.framework.math.Point2f
+
+/** 
+ * @author AG
+ * 
+ */
+class EnvObject {
+	val position = new Point2f
+	
+	def getPosition : Point2f {
+		this.position
+	}
+	
+	def setPosition(position : Point2f) {
+		this.position.x = position.x
+		this.position.y = position.y
+	}
+}

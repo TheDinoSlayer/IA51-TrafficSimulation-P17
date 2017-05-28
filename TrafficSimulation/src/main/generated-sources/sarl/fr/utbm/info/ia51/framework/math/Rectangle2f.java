@@ -27,6 +27,7 @@ import fr.utbm.info.ia51.framework.math.MotionHull2f;
 import fr.utbm.info.ia51.framework.math.Point2f;
 import fr.utbm.info.ia51.framework.math.Shape2f;
 import fr.utbm.info.ia51.framework.math.Tuple2f;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import org.eclipse.xtext.xbase.lib.Pure;
@@ -38,6 +39,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @version $Name$ $Revision$ $Date$
  */
 @SarlSpecification("0.5")
+@SarlElementType(8)
 @SuppressWarnings("all")
 public class Rectangle2f extends Shape2f<Rectangle2f> {
   private final Point2f lower = new Point2f();

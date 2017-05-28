@@ -21,6 +21,7 @@
 package fr.utbm.info.ia51.framework.math;
 
 import com.google.common.base.Objects;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import java.io.Serializable;
@@ -37,6 +38,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @version $Name$ $Revision$ $Date$
  */
 @SarlSpecification("0.5")
+@SarlElementType(8)
 @SuppressWarnings("all")
 public abstract class Tuple2f<T extends Tuple2f<?>> implements Serializable, Cloneable, Comparable<T> {
   /**

@@ -1,0 +1,10 @@
+/** 
+ * 
+ */
+package environment.staticenv
+/** 
+ * @author regedit
+ * 
+ */
+class BusStation {
+}

@@ -26,6 +26,7 @@ import fr.utbm.info.ia51.framework.math.Point2f;
 import fr.utbm.info.ia51.framework.math.Rectangle2f;
 import fr.utbm.info.ia51.framework.math.Shape2f;
 import fr.utbm.info.ia51.framework.math.Tuple2f;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import org.eclipse.xtext.xbase.lib.Pure;
@@ -39,6 +40,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @version $Name$ $Revision$ $Date$
  */
 @SarlSpecification("0.5")
+@SarlElementType(8)
 @SuppressWarnings("all")
 public class Circle2f extends Shape2f<Circle2f> {
   private final Point2f center = new Point2f();

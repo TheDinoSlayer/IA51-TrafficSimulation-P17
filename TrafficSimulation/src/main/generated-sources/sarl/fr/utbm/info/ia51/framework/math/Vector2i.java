@@ -23,6 +23,7 @@ package fr.utbm.info.ia51.framework.math;
 import fr.utbm.info.ia51.framework.math.MathUtil;
 import fr.utbm.info.ia51.framework.math.Point2i;
 import fr.utbm.info.ia51.framework.math.Tuple2i;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import org.eclipse.xtext.xbase.lib.Exceptions;
@@ -38,6 +39,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @version $Name$ $Revision$ $Date$
  */
 @SarlSpecification("0.5")
+@SarlElementType(8)
 @SuppressWarnings("all")
 public class Vector2i extends Tuple2i<Vector2i> {
   public Vector2i() {

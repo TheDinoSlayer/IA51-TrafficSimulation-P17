@@ -1,5 +1,6 @@
 package capacity;
 
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.core.AgentTrait;
 import io.sarl.lang.core.Capacity;
@@ -9,6 +10,7 @@ import io.sarl.lang.core.Capacity;
  */
 @FunctionalInterface
 @SarlSpecification("0.5")
+@SarlElementType(17)
 @SuppressWarnings("all")
 public interface Alarm extends Capacity {
   public abstract void emitAlarm();

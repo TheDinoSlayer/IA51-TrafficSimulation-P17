@@ -1,6 +1,7 @@
 package agent;
 
 import agent.Vehicle;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import io.sarl.lang.core.BuiltinCapacitiesProvider;
@@ -11,6 +12,7 @@ import javax.inject.Inject;
  * @author AG
  */
 @SarlSpecification("0.5")
+@SarlElementType(16)
 @SuppressWarnings("all")
 public class Priority extends Vehicle {
   @SyntheticMember

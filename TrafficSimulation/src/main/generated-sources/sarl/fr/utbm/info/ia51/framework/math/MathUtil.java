@@ -23,6 +23,7 @@ package fr.utbm.info.ia51.framework.math;
 import fr.utbm.info.ia51.framework.math.Point2f;
 import fr.utbm.info.ia51.framework.math.Tuple2f;
 import fr.utbm.info.ia51.framework.math.Vector2f;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import org.eclipse.xtext.xbase.lib.ExclusiveRange;
 import org.eclipse.xtext.xbase.lib.Pure;
@@ -36,6 +37,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @version $Name$ $Revision$ $Date$
  */
 @SarlSpecification("0.5")
+@SarlElementType(8)
 @SuppressWarnings("all")
 public final class MathUtil {
   private MathUtil() {

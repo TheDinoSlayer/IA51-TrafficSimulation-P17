@@ -1,6 +1,7 @@
 package skill;
 
 import capacity.Alarm;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import io.sarl.lang.core.Agent;
@@ -11,6 +12,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @author AG
  */
 @SarlSpecification("0.5")
+@SarlElementType(19)
 @SuppressWarnings("all")
 public class WarningAlarm extends Skill implements Alarm {
   private boolean status;
@@ -39,8 +41,8 @@ public class WarningAlarm extends Skill implements Alarm {
   @Pure
   @SyntheticMember
   public int hashCode() {
-    final int prime = 31;
     int result = super.hashCode();
+    final int prime = 31;
     result = prime * result + (this.status ? 1231 : 1237);
     return result;
   }

@@ -2,10 +2,12 @@ package skill;
 
 import capacity.MoveBody;
 import fr.utbm.info.ia51.framework.math.Vector2f;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import io.sarl.lang.core.Agent;
 import io.sarl.lang.core.Skill;
+import java.util.Objects;
 import java.util.UUID;
 import org.eclipse.xtext.xbase.lib.Pure;
 
@@ -13,6 +15,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @author AG
  */
 @SarlSpecification("0.5")
+@SarlElementType(19)
 @SuppressWarnings("all")
 public class InfluenceBasedSkill extends Skill implements MoveBody {
   private UUID envID;
@@ -32,11 +35,9 @@ public class InfluenceBasedSkill extends Skill implements MoveBody {
     if (getClass() != obj.getClass())
       return false;
     InfluenceBasedSkill other = (InfluenceBasedSkill) obj;
-    if (this.envID == null) {
-      if (other.envID != null)
-        return false;
-    } else if (!this.envID.equals(other.envID))
+    if (!Objects.equals(this.envID, other.envID)) {
       return false;
+    }
     return super.equals(obj);
   }
   
@@ -44,9 +45,9 @@ public class InfluenceBasedSkill extends Skill implements MoveBody {
   @Pure
   @SyntheticMember
   public int hashCode() {
-    final int prime = 31;
     int result = super.hashCode();
-    result = prime * result + ((this.envID== null) ? 0 : this.envID.hashCode());
+    final int prime = 31;
+    result = prime * result + Objects.hashCode(this.envID);
     return result;
   }
   

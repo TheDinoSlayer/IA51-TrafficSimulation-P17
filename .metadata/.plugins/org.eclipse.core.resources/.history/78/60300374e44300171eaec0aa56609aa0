@@ -1,0 +1,18 @@
+/** 
+ * 
+ */
+package environment.staticenv.sign
+
+import environment.EnvObject
+
+/** 
+ * @author AG
+ * 
+ */
+class GiveWay extends EnvObject implements SignType {
+	val signType = SignType.STOP
+
+	override getType : SignType {
+		this.signType
+	}
+}

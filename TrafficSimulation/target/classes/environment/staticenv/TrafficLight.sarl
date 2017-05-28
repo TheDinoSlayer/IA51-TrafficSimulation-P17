@@ -1,0 +1,29 @@
+/** 
+ * 
+ */
+package environment.staticenv
+/** 
+ * @author AG
+ * 
+ */
+class TrafficLight {
+	var status : Boolean
+	var time : int
+	var colour : ColourLight
+	
+	def getStatus : Boolean {
+		this.status
+	}
+	
+	def getColour : ColourLight {
+		this.colour
+	}
+	
+	def checkStatus : void {
+		
+	}
+	
+	private def toGreen : void {
+		
+	}
+}

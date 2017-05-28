@@ -1,0 +1,10 @@
+/** 
+ * 
+ */
+package environment.staticenv.sign
+/** 
+ * @author AG
+ * 
+ */
+class Stop implements SignSymbol {
+}

@@ -22,6 +22,7 @@ package fr.utbm.info.ia51.framework.math;
 
 import fr.utbm.info.ia51.framework.math.Rectangle2f;
 import fr.utbm.info.ia51.framework.math.Tuple2f;
+import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import java.io.Serializable;
@@ -35,6 +36,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
  * @version $Name$ $Revision$ $Date$
  */
 @SarlSpecification("0.5")
+@SarlElementType(8)
 @SuppressWarnings("all")
 public abstract class Shape2f<S extends Shape2f<S>> implements Serializable, Cloneable {
   public Shape2f() {

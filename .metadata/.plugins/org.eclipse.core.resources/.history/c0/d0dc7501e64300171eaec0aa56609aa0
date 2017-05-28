@@ -1,0 +1,14 @@
+/** 
+ * 
+ */
+package environment.staticenv
+/** 
+ * @author AG
+ * 
+ */
+class TrafficLight {
+	var status : Boolean
+	var time : int
+	var colour : ColourLight
+	
+}
