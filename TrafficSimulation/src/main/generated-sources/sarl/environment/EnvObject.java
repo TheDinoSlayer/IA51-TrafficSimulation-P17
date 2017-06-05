@@ -4,6 +4,8 @@ import fr.utbm.info.ia51.framework.math.Point2f;
 import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
+import java.util.Objects;
+import java.util.UUID;
 import org.eclipse.xtext.xbase.lib.Pure;
 
 /**
@@ -13,6 +15,8 @@ import org.eclipse.xtext.xbase.lib.Pure;
 @SarlElementType(8)
 @SuppressWarnings("all")
 public class EnvObject {
+  private UUID id;
+  
   private final Point2f position = new Point2f();
   
   @Pure
@@ -33,6 +37,16 @@ public class EnvObject {
   @Pure
   @SyntheticMember
   public boolean equals(final Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    EnvObject other = (EnvObject) obj;
+    if (!Objects.equals(this.id, other.id)) {
+      return false;
+    }
     return super.equals(obj);
   }
   
@@ -41,6 +55,8 @@ public class EnvObject {
   @SyntheticMember
   public int hashCode() {
     int result = super.hashCode();
+    final int prime = 31;
+    result = prime * result + Objects.hashCode(this.id);
     return result;
   }
   
