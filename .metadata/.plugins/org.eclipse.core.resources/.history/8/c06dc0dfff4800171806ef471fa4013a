@@ -1,0 +1,10 @@
+/** 
+ * 
+ */
+package environment
+/** 
+ * @author AG
+ * 
+ */
+class Edge {
+}

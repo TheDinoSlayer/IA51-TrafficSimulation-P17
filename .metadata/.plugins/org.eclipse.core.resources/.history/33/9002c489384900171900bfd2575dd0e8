@@ -1,0 +1,17 @@
+/** 
+ * 
+ */
+package environment
+
+import java.util.Map
+
+/** 
+ * @author AG
+ * 
+ */
+class Edge {
+	var origin : Node
+	var destination : Node
+	var objects : Map
+	
+}
