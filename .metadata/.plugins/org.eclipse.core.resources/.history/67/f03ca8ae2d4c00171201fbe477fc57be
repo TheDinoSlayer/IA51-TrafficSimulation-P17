@@ -1,0 +1,16 @@
+package environment
+
+import java.util.LinkedList
+
+/** 
+ * @author AG
+ * 
+ */
+class Graph {
+	val edges = new LinkedList<Edge>
+	val nodes = new LinkedList<Node>
+	
+	def addEdge(origin : Node, destination : Node) {
+		
+	}
+}

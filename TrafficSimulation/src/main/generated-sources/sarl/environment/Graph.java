@@ -5,7 +5,7 @@ import environment.Node;
 import io.sarl.lang.annotation.SarlElementType;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
-import java.util.List;
+import java.util.LinkedList;
 import org.eclipse.xtext.xbase.lib.Pure;
 
 /**
@@ -15,9 +15,50 @@ import org.eclipse.xtext.xbase.lib.Pure;
 @SarlElementType(8)
 @SuppressWarnings("all")
 public class Graph {
-  private List<Edge> edges;
+  private final LinkedList<Edge> edges = new LinkedList<Edge>();
   
-  private List<Node> nodes;
+  private final LinkedList<Node> nodes = new LinkedList<Node>();
+  
+  public boolean addEdge(final Node origin, final Node destination) {
+    boolean _xblockexpression = false;
+    {
+      final Edge edge = new Edge(origin, destination);
+      origin.getOutgoing().add(edge);
+      destination.getIncoming().add(edge);
+      _xblockexpression = this.edges.add(edge);
+    }
+    return _xblockexpression;
+  }
+  
+  public boolean addNode(final Node node) {
+    boolean _xifexpression = false;
+    boolean _contains = this.nodes.contains(node);
+    boolean _not = (!_contains);
+    if (_not) {
+      _xifexpression = this.nodes.add(node);
+    }
+    return _xifexpression;
+  }
+  
+  public boolean addIncomingNode(final Node node, final Node outNode) {
+    boolean _xblockexpression = false;
+    {
+      this.addNode(node);
+      this.addNode(outNode);
+      _xblockexpression = this.addEdge(outNode, node);
+    }
+    return _xblockexpression;
+  }
+  
+  public boolean addOutgoingNode(final Node node, final Node inNode) {
+    boolean _xblockexpression = false;
+    {
+      this.addNode(node);
+      this.addNode(inNode);
+      _xblockexpression = this.addEdge(node, inNode);
+    }
+    return _xblockexpression;
+  }
   
   @Override
   @Pure

@@ -14,6 +14,10 @@ class EnvObject {
 	var id : UUID
 	val position = new Point2f
 	
+	def getID : UUID {
+		this.id
+	}
+	
 	def getPosition : Point2f {
 		this.position
 	}

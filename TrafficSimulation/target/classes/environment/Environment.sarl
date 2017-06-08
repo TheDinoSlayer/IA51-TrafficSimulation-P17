@@ -1,0 +1,39 @@
+package environment
+
+import java.util.HashSet
+
+/** 
+ * @author Quan
+ * 
+ */
+class Environment {
+	var graph = new Graph 
+	var environmentObjects : QuadTree
+	
+	var bodies = new HashSet<AgentBody>
+	
+	def computePerception{
+		for (body : bodies){
+			body.perception = newSet
+			for (s : body.node.iterator(body.entry,position)){
+				for (o: s.objects){
+					body.perception += o
+				}
+			}
+		}
+	}
+	def updateEnvironment{
+		for (body : bodies){
+			var resolvedInfluences = newSet
+			for (inf : body.influences){
+				if (inf.inConflict(resolvedInfluences)){
+					inf = inf.resolve(resolvedInfluences)
+				}
+				resolvedInfluences += inf
+			}
+			for (reaction : resolvedInfluence){
+				reaction.apply(grid)
+			}
+		}
+	}
+}

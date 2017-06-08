@@ -1,0 +1,12 @@
+package environment
+
+import java.util.List
+
+/** 
+ * @author AG
+ * 
+ */
+class Graph {
+	var edges : List<Edge>
+	var nodes : List<Node> 
+}

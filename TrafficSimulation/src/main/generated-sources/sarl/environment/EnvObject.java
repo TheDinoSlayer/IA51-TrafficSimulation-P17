@@ -20,6 +20,11 @@ public class EnvObject {
   private final Point2f position = new Point2f();
   
   @Pure
+  public UUID getID() {
+    return this.id;
+  }
+  
+  @Pure
   public Point2f getPosition() {
     return this.position;
   }

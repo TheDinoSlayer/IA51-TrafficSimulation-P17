@@ -12,7 +12,19 @@ import java.util.HashSet
  * 
  */
 class Node {
-	var outgoing : HashSet<Edge>
-	var incoming : HashSet<Edge>
-	var objects : Map<UUID, EnvObject>	
+	val outgoing = new HashSet<Edge>
+	val incoming = new HashSet<Edge>
+	var objects : Map<UUID, EnvObject>
+	
+	def getOutgoing	: HashSet<Edge> {
+		this.outgoing
+	}
+	
+	def getIncoming : HashSet<Edge> {
+		this.incoming
+	}
+	
+	def getObjects : Map<UUID, EnvObject> {
+		this.objects
+	}
 }

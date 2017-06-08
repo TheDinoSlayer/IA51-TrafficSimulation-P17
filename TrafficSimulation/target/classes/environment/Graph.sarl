@@ -1,11 +1,39 @@
-/** 
- * 
- */
 package environment
+
+import java.util.LinkedList
+
 /** 
  * @author AG
  * 
  */
 class Graph {
+	val edges = new LinkedList<Edge>
+	val nodes = new LinkedList<Node>
 	
+	def addEdge(origin : Node, destination : Node) {
+		val edge = new Edge(origin, destination)
+		
+		origin.outgoing.add(edge)
+		destination.incoming.add(edge)
+		
+		this.edges.add(edge)
+	}
+	
+	def addNode(node : Node){
+		if (!this.nodes.contains(node)) {
+			this.nodes.add(node)			
+		}
+	}
+	
+	def addIncomingNode(node : Node, outNode : Node) {
+		this.addNode(node)
+		this.addNode(outNode)
+		this.addEdge(outNode, node)
+	}
+	
+	def addOutgoingNode(node : Node, inNode : Node) {
+		this.addNode(node)
+		this.addNode(inNode)
+		this.addEdge(node, inNode)
+	}
 }

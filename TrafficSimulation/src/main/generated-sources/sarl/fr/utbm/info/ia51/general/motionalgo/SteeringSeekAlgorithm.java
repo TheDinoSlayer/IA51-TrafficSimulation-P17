@@ -40,7 +40,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
 public class SteeringSeekAlgorithm extends AbstractSeekAlgorithm {
   @Override
   @Pure
-  @Inline(value = "JvmEnumerationLiteral: fr.utbm.info.ia51.framework.environment.DynamicType.STEERING (visibility: PUBLIC, simpleName: STEERING, identifier: fr.utbm.info.ia51.framework.environment.DynamicType.STEERING, deprecated: <unset>) (static: true, final: true, volatile: false, transient: false, constant: false, constantValue: null)", constantExpression = true)
+  @Inline(value = "JvmEnumerationLiteral: fr.utbm.info.ia51.framework.environment.DynamicType.STEERING (visibility: PUBLIC, simpleName: STEERING, identifier: fr.utbm.info.ia51.framework.environment.DynamicType.STEERING, deprecated: <unset>) (static: true, final: true, volatile: false, transient: false, constant: <unset>, constantValue: null)", constantExpression = true)
   public DynamicType getDynamicType() {
     return DynamicType.STEERING;
   }
