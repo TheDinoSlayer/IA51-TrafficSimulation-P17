@@ -34,6 +34,8 @@ import fr.utbm.info.ia51.framework.environment.MotionInfluence
 import fr.utbm.info.ia51.framework.environment.Percept
 import fr.utbm.info.ia51.framework.environment.Influence
 import fr.utbm.info.ia51.framework.environment.DynamicType
+import ^capacity.MoveBody
+import java.util.Vector
 
 /**
  * Object on the environment.
@@ -41,9 +43,11 @@ import fr.utbm.info.ia51.framework.environment.DynamicType
  * @author St&eacute;phane GALLAND &lt;stephane.galland@utbm.fr&gt;
  * @version $Name$ $Revision$ $Date$
  */
-class AgentBody extends AbstractMobileObject implements Body {
+class AgentBody extends AbstractMobileObject implements Body, MoveBody {
 
 	val frustum : Frustum 
+	
+	var orientation : Vector
 	
 	transient var motionInfluence : MotionInfluence
 	transient var otherInfluences : List<Influence> = new ArrayList
@@ -190,5 +194,9 @@ class AgentBody extends AbstractMobileObject implements Body {
 		// TODO assert(perceptions!=null);
 		this.perceptions = perceptions
 	}
-
+	
+	override move(linear : Vector2f, angular : float) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
 }
