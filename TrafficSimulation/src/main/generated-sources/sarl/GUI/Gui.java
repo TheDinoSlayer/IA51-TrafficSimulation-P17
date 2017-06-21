@@ -48,7 +48,7 @@ public class Gui extends AbstractFrameworkGUI {
   }.apply();
   
   public Gui(final float worldWidth, final float worldHeight, final TimeManager timeManager) {
-    super("Project with trffic simulation", worldWidth, worldHeight, Resources.getResource(Gui.class, "icon.png"), timeManager);
+    super("Project with traffic simulation", worldWidth, worldHeight, Resources.getResource(Gui.class, "map.png"), timeManager);
   }
   
   @Override

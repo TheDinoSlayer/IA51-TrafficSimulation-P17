@@ -1,0 +1,13 @@
+/** 
+ * 
+ */
+package environment.staticenv
+/** 
+ * @author AG
+ * 
+ */
+enum ColourLight {
+	GREEN,
+	RED,
+	ORANGE
+}

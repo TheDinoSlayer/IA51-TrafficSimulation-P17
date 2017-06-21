@@ -1,0 +1,84 @@
+/** 
+ * 
+ */
+package environment
+
+import fr.utbm.info.ia51.framework.environment.AbstractEnvironment
+import fr.utbm.info.ia51.framework.gui.WorldModelStateProvider
+import fr.utbm.info.ia51.framework.environment.AgentBody
+import java.util.List
+import fr.utbm.info.ia51.framework.environment.Influence
+import fr.utbm.info.ia51.framework.environment.Percept
+import java.util.Collection
+import fr.utbm.info.ia51.framework.environment.MotionInfluence
+import fr.utbm.info.ia51.framework.time.TimeManager
+import fr.utbm.info.ia51.framework.environment.SituatedObject
+import fr.utbm.info.ia51.framework.math.Point2f
+import fr.utbm.info.ia51.framework.time.StepTimeManager
+import fr.utbm.info.ia51.labworks.motionbeh.environment.Tree
+import fr.utbm.info.ia51.framework.math.Rectangle2f
+import java.util.UUID
+import fr.utbm.info.ia51.framework.math.Circle2f
+import fr.utbm.info.ia51.general.frustum.CircleFrustum
+import fr.utbm.info.ia51.framework.math.MathUtil
+import java.text.MessageFormat
+
+/** 
+ * @author Quan
+ * 
+ */
+class WorldModel extends AbstractEnvironment implements WorldModelStateProvider {
+
+	static val CAR_SIZE = 20f
+
+	var spatialTree : Tree<AgentBody>
+
+
+	new (width : float, height : float) {
+		super(width, height, new StepTimeManager(500))
+		this.spatialTree = new Tree(new Rectangle2f(0, 0, width, height))
+	}
+	
+	
+	protected override onAgentBodyCreated(body : AgentBody) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	protected override onAgentBodyDestroyed(body : AgentBody) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	protected override computeEndogenousBehaviorInfluences : List<Influence> {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	protected override computePerceptionsFor(^agent : AgentBody) : List<Percept> {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	protected override applyInfluences(motionInfluences : Collection<MotionInfluence>, otherInfluences : Collection<Influence>, timeManager : TimeManager) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	override getAllObjects : Iterable<? extends SituatedObject> {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	override setMouseTarget(target : Point2f) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	def createCar {
+		var id = UUID::randomUUID
+		var frustum = new CircleFrustum(id, 10 * CAR_SIZE)
+		var body = new AgentBody(id, new Circle2f(0f, 0f, CAR_SIZE), // body
+				5f,						// max linear speed m/s
+		0.5f,						// max linear acceleration (m/s)/s
+		MathUtil.PI/ 4f, // max angular speed r/s
+		MathUtil.PI / 10f, // max angular acceleration (r/s)/s
+		frustum) // FIXME
+		body.name = MessageFormat::format("Car #{0}", this.agentBodyNumber + 1)
+		//addAgentBody(body, randomPosition, Math::random as float * MathUtil.TWO_PI)
+	}
+
+}
