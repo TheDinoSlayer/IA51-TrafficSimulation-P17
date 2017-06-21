@@ -65,7 +65,7 @@ public abstract class Influence implements Serializable {
    * 
    * @param emitter is the emitter of the influence.
    */
-  UUID setEmitter(final UUID emitter) {
+  public UUID setEmitter(final UUID emitter) {
     return this.emitter = emitter;
   }
   

@@ -27,14 +27,12 @@ agent MainProgram extends FrameworkLauncher{
 
 			for (i : 1 .. NUMBER_CARS) {
 				environment.createCar
-				
 			}
 			var gui = new Gui(WORLD_SIZE_X, WORLD_SIZE_Y, environment.timeManager)
 
 			return initializeSimulation(environment, type, gui, parameters)[typeof(Car)]
 		} else {
 			return false
-		}
-		
+		}	
 	}	
 }
