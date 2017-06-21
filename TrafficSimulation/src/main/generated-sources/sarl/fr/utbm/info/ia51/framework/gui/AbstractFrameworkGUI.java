@@ -114,13 +114,6 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
   }
   
   @Pure
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  @Inline(value = "null", constantExpression = true)
->>>>>>> 8436a7b7387d3cfc1c155c58407c2644c8546621
-=======
->>>>>>> 47b10ecbc903d5177755367431d6163a9cd1d92d
   public int hashCode() {
     return System.identityHashCode(this);
   }
@@ -202,13 +195,6 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
   
   @Override
   @Pure
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  @Inline(value = "null", constantExpression = true)
->>>>>>> 8436a7b7387d3cfc1c155c58407c2644c8546621
-=======
->>>>>>> 47b10ecbc903d5177755367431d6163a9cd1d92d
   public String getMessage() {
     return this.messageBox.getText();
   }
@@ -347,13 +333,6 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
    * @return the size on the screen.
    */
   @Override
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  @Inline(value = "null", constantExpression = true)
->>>>>>> 8436a7b7387d3cfc1c155c58407c2644c8546621
-=======
->>>>>>> 47b10ecbc903d5177755367431d6163a9cd1d92d
   public float mas2screen(final float size) {
     return size;
   }
@@ -389,15 +368,7 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
     if ((shape instanceof Circle2f)) {
       Circle2f circle = ((Circle2f)shape);
       Point2f p = this.mas2screen(((Circle2f)shape).getCenter());
-<<<<<<< HEAD
-<<<<<<< HEAD
       float radius = this.mas2screen(circle.getRadius());
-=======
-      float radius = null;
->>>>>>> 8436a7b7387d3cfc1c155c58407c2644c8546621
-=======
-      float radius = this.mas2screen(circle.getRadius());
->>>>>>> 47b10ecbc903d5177755367431d6163a9cd1d92d
       float _x = p.getX();
       float _minus = (_x - radius);
       float _y = p.getY();
@@ -412,18 +383,8 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
       Point2f u = this.mas2screen(rect.getUpper());
       float _min = Math.min(l.getX(), u.getX());
       float _min_1 = Math.min(l.getY(), u.getY());
-<<<<<<< HEAD
-<<<<<<< HEAD
       float _mas2screen = this.mas2screen(rect.getWidth());
       float _mas2screen_1 = this.mas2screen(rect.getHeight());
-=======
-      float _mas2screen = null;
-      float _mas2screen_1 = null;
->>>>>>> 8436a7b7387d3cfc1c155c58407c2644c8546621
-=======
-      float _mas2screen = this.mas2screen(rect.getWidth());
-      float _mas2screen_1 = this.mas2screen(rect.getHeight());
->>>>>>> 47b10ecbc903d5177755367431d6163a9cd1d92d
       return new Rectangle2D.Float(
         ((float) _min), 
         ((float) _min_1), _mas2screen, _mas2screen_1);

@@ -35,12 +35,11 @@ public class Gui extends AbstractFrameworkGUI{
 //	}
 
 	new (worldWidth : float, worldHeight : float, timeManager : TimeManager) {
-		super("Project with traffic simulation",
-<<<<<<< HEAD
-				worldWidth, worldHeight, Resources::getResource(typeof(Gui), "icon.png"), // $NON-NLS-1$
-=======
-				worldWidth, worldHeight, Resources::getResource(typeof(Gui), "map.png"), // $NON-NLS-1$
->>>>>>> 8436a7b7387d3cfc1c155c58407c2644c8546621
+		super(
+		"Project with traffic simulation", 
+		worldWidth, 
+		worldHeight, 
+		Resources::getResource(typeof(Gui), "icon.png"), // $NON-NLS-1$
 		timeManager)
 	}
 
