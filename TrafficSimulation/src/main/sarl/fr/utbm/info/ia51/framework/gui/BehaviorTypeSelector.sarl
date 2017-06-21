@@ -26,6 +26,7 @@ import java.awt.GridLayout
 import javax.swing.ImageIcon
 import javax.swing.JButton
 import javax.swing.JDialog
+import javax.swing.JLabel
 
 /**
  * Dialog box for selecting the type of a behavior.
@@ -55,16 +56,15 @@ class BehaviorTypeSelector extends JDialog {
 		
 		this.layout = new GridLayout(1, 1)
 
-		var imageUrl = Resources::getResource(BehaviorTypeSelector, "map.png")
+		var imageUrl = Resources::getResource(BehaviorTypeSelector, "map.jpeg")
 		var icon = new ImageIcon(imageUrl)
-		var label = "Traffic simulation"
-		var kinematicButton = new JButton(label, icon)
-		kinematicButton.addActionListener [
-			synchronized(this) {
-				this.behaviorType = DynamicType.KINEMATIC
-			}
-			this.visible = false
-		]
+		//var label = "Traffic simulation"
+		var kinematicButton = new JButton(icon)
+		//kinematicButton.setEnabled(false);
+
+
+
+
 		add(kinematicButton)
 
 //		imageUrl = Resources::getResource(BehaviorTypeSelector, "steering.png")

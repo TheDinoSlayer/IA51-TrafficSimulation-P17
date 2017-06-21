@@ -27,8 +27,6 @@ import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -65,17 +63,9 @@ public class BehaviorTypeSelector extends JDialog {
     this.setModal(true);
     GridLayout _gridLayout = new GridLayout(1, 1);
     this.setLayout(_gridLayout);
-    URL imageUrl = Resources.getResource(BehaviorTypeSelector.class, "map.png");
+    URL imageUrl = Resources.getResource(BehaviorTypeSelector.class, "map.jpeg");
     ImageIcon icon = new ImageIcon(imageUrl);
-    String label = "Traffic simulation";
-    JButton kinematicButton = new JButton(label, icon);
-    final ActionListener _function = (ActionEvent it) -> {
-      synchronized (this) {
-        this.behaviorType = DynamicType.KINEMATIC;
-      }
-      this.setVisible(false);
-    };
-    kinematicButton.addActionListener(_function);
+    JButton kinematicButton = new JButton(icon);
     this.add(kinematicButton);
     this.pack();
     Dimension d = this.getSize();
