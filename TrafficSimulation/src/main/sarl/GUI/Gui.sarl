@@ -26,13 +26,13 @@ public class Gui extends AbstractFrameworkGUI{
 	static var ICON_WIDTH : int
 	static var ICON_HEIGHT : int
 	
-	static val FAKE = {
-		var url = Resources.getResource(typeof(Gui), "car.png")
-		CAR_ICON = new ImageIcon(url)
-		ICON_WIDTH  = CAR_ICON.iconWidth
-		ICON_HEIGHT = CAR_ICON.iconHeight
-		null
-	}
+//	static val FAKE = {
+//		var url = Resources.getResource(typeof(Gui), "car.png")
+//		CAR_ICON = new ImageIcon(url)
+//		ICON_WIDTH  = CAR_ICON.iconWidth
+//		ICON_HEIGHT = CAR_ICON.iconHeight
+//		null
+//	}
 
 	new (worldWidth : float, worldHeight : float, timeManager : TimeManager) {
 		super("Project with traffic simulation",

@@ -63,7 +63,7 @@ class WorldModel extends AbstractEnvironment implements WorldModelStateProvider 
 	override getAllObjects : Iterable<? extends SituatedObject> {
 		throw new UnsupportedOperationException("TODO: auto-generated method stub")
 	}
-	
+
 	override setMouseTarget(target : Point2f) {
 		throw new UnsupportedOperationException("TODO: auto-generated method stub")
 	}

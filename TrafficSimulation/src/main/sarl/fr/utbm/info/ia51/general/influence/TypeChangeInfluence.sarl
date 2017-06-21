@@ -35,6 +35,7 @@ class TypeChangeInfluence extends Influence {
 	
 	val type : Serializable 
 	
+
 	/**
 	 * @param influencedObject the removed object.
 	 * @param newType the new type.

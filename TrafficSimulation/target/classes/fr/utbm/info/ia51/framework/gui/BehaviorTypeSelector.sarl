@@ -53,11 +53,11 @@ class BehaviorTypeSelector extends JDialog {
 		this.title = "Behavior Type Selection"
 		this.modal = true
 		
-		this.layout = new GridLayout(2, 1)
+		this.layout = new GridLayout(1, 1)
 
-		var imageUrl = Resources::getResource(BehaviorTypeSelector, "kinematic.png")
+		var imageUrl = Resources::getResource(BehaviorTypeSelector, "map.png")
 		var icon = new ImageIcon(imageUrl)
-		var label = "Kinematic Behavior (speed)"
+		var label = "Traffic simulation"
 		var kinematicButton = new JButton(label, icon)
 		kinematicButton.addActionListener [
 			synchronized(this) {
@@ -67,17 +67,17 @@ class BehaviorTypeSelector extends JDialog {
 		]
 		add(kinematicButton)
 
-		imageUrl = Resources::getResource(BehaviorTypeSelector, "steering.png")
-		icon = new ImageIcon(imageUrl)
-		label = "Steering Behavior (acceleration)"
-		var steeringButton = new JButton(label, icon)
-		steeringButton.addActionListener [
-			synchronized(this) {
-				this.behaviorType = DynamicType.STEERING
-			}
-			this.visible = false
-		]
-		add(steeringButton)
+//		imageUrl = Resources::getResource(BehaviorTypeSelector, "steering.png")
+//		icon = new ImageIcon(imageUrl)
+//		label = "Steering Behavior (acceleration)"
+//		var steeringButton = new JButton(label, icon)
+//		steeringButton.addActionListener [
+//			synchronized(this) {
+//				this.behaviorType = DynamicType.STEERING
+//			}
+//			this.visible = false
+//		]
+//		add(steeringButton)
 		
 		pack
 		var d = getSize

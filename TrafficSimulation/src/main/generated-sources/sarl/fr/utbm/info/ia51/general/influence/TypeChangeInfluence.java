@@ -18,84 +18,79 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * This program is free software; you can redistribute it and/or modify
  */
-package fr.utbm.info.ia51.framework.environment;
+package fr.utbm.info.ia51.general.influence;
 
+import fr.utbm.info.ia51.framework.environment.Influence;
+import io.sarl.lang.annotation.DefaultValue;
+import io.sarl.lang.annotation.DefaultValueSource;
+import io.sarl.lang.annotation.DefaultValueUse;
 import io.sarl.lang.annotation.SarlElementType;
+import io.sarl.lang.annotation.SarlSourceCode;
 import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import java.io.Serializable;
-import java.util.Objects;
 import java.util.UUID;
 import org.eclipse.xtext.xbase.lib.Pure;
 
 /**
- * Abstract implementation of an influence.
+ * Influence for changing the type of an object.
  * 
- * @param <IO> is the type of the influencable objects.
  * @author St&eacute;phane GALLAND &lt;stephane.galland@utbm.fr&gt;
  * @version $Name$ $Revision$ $Date$
  */
 @SarlSpecification("0.5")
 @SarlElementType(8)
 @SuppressWarnings("all")
-public abstract class Influence implements Serializable {
-  private UUID emitter;
-  
-  private final UUID influencedObject;
+public class TypeChangeInfluence extends Influence {
+  private final Serializable type;
   
   /**
-   * @param influencedObject is the influenced object.
+   * @param influencedObject the removed object.
+   * @param newType the new type.
    */
-  protected Influence(final UUID influencedObject) {
-    this.influencedObject = influencedObject;
+  @DefaultValueSource
+  public TypeChangeInfluence(@DefaultValue("fr.utbm.info.ia51.general.influence.TypeChangeInfluence#NEW_0") final UUID influencedObject, final Serializable newType) {
+    super(influencedObject);
+    this.type = newType;
   }
   
   /**
-   * Replies the emitter of the influence.
+   * Default value for the parameter influencedObject
+   */
+  @SyntheticMember
+  @SarlSourceCode("null")
+  private final static UUID $DEFAULT_VALUE$NEW_0 = null;
+  
+  /**
+   * Replies the new type.
    * 
-   * @return the emitter of the influence.
+   * @return the type.
    */
   @Pure
-  public UUID getEmitter() {
-    return this.emitter;
+  public Serializable getType() {
+    return this.type;
   }
   
-  /**
-   * Set the emitter of the influence.
-   * 
-   * @param emitter is the emitter of the influence.
-   */
-  public UUID setEmitter(final UUID emitter) {
-    return this.emitter = emitter;
-  }
-  
-  /**
-   * Replies the influenced object.
-   * 
-   * @return the influenced object.
-   */
+  @Override
   @Pure
-  public UUID getInfluencedObject() {
-    return this.influencedObject;
+  public String toString() {
+    return ("CHANGE_TYPE_TO: " + this.type);
+  }
+  
+  /**
+   * @optionalparam influencedObject the removed object.
+   * @optionalparam newType the new type.
+   */
+  @DefaultValueUse("java.util.UUID,java.io.Serializable")
+  @SyntheticMember
+  public TypeChangeInfluence(final Serializable newType) {
+    this($DEFAULT_VALUE$NEW_0, newType);
   }
   
   @Override
   @Pure
   @SyntheticMember
   public boolean equals(final Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass())
-      return false;
-    Influence other = (Influence) obj;
-    if (!Objects.equals(this.emitter, other.emitter)) {
-      return false;
-    }
-    if (!Objects.equals(this.influencedObject, other.influencedObject)) {
-      return false;
-    }
     return super.equals(obj);
   }
   
@@ -104,12 +99,9 @@ public abstract class Influence implements Serializable {
   @SyntheticMember
   public int hashCode() {
     int result = super.hashCode();
-    final int prime = 31;
-    result = prime * result + Objects.hashCode(this.emitter);
-    result = prime * result + Objects.hashCode(this.influencedObject);
     return result;
   }
   
   @SyntheticMember
-  private final static long serialVersionUID = -2090986192L;
+  private final static long serialVersionUID = 4583127163L;
 }
