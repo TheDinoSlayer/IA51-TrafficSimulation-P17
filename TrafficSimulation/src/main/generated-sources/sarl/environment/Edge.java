@@ -16,27 +16,36 @@ import org.eclipse.xtext.xbase.lib.Pure;
 @SarlElementType(8)
 @SuppressWarnings("all")
 public class Edge {
-  private Node origin;
+  private final Node origin;
   
-  private Node destination;
+  private final Node destination;
   
   private Map<UUID, EnvObject> objects;
   
-  private int weight;
+  public Edge(final Node origin, final Node destination) {
+    this.origin = origin;
+    this.destination = destination;
+  }
+  
+  @Pure
+  public Node getOrigin() {
+    return this.origin;
+  }
+  
+  @Pure
+  public Node getDestination() {
+    return this.destination;
+  }
+  
+  @Pure
+  public Map<UUID, EnvObject> getObjects() {
+    return this.objects;
+  }
   
   @Override
   @Pure
   @SyntheticMember
   public boolean equals(final Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass())
-      return false;
-    Edge other = (Edge) obj;
-    if (other.weight != this.weight)
-      return false;
     return super.equals(obj);
   }
   
@@ -45,13 +54,6 @@ public class Edge {
   @SyntheticMember
   public int hashCode() {
     int result = super.hashCode();
-    final int prime = 31;
-    result = prime * result + this.weight;
     return result;
-  }
-  
-  @SyntheticMember
-  public Edge() {
-    super();
   }
 }

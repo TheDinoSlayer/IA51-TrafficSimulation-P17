@@ -17,11 +17,26 @@ import org.eclipse.xtext.xbase.lib.Pure;
 @SarlElementType(8)
 @SuppressWarnings("all")
 public class Node {
-  private HashSet<Edge> outgoing;
+  private final HashSet<Edge> outgoing = new HashSet<Edge>();
   
-  private HashSet<Edge> incoming;
+  private final HashSet<Edge> incoming = new HashSet<Edge>();
   
   private Map<UUID, EnvObject> objects;
+  
+  @Pure
+  public HashSet<Edge> getOutgoing() {
+    return this.outgoing;
+  }
+  
+  @Pure
+  public HashSet<Edge> getIncoming() {
+    return this.incoming;
+  }
+  
+  @Pure
+  public Map<UUID, EnvObject> getObjects() {
+    return this.objects;
+  }
   
   @Override
   @Pure

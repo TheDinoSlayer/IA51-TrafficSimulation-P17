@@ -114,7 +114,10 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
   }
   
   @Pure
+<<<<<<< HEAD
   @Inline(value = "null", constantExpression = true)
+=======
+>>>>>>> eb08f408c19f47229d135b93fc33d11884ebe328
   public int hashCode() {
     return System.identityHashCode(this);
   }
@@ -196,7 +199,10 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
   
   @Override
   @Pure
+<<<<<<< HEAD
   @Inline(value = "null", constantExpression = true)
+=======
+>>>>>>> eb08f408c19f47229d135b93fc33d11884ebe328
   public String getMessage() {
     return this.messageBox.getText();
   }
@@ -335,7 +341,10 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
    * @return the size on the screen.
    */
   @Override
+<<<<<<< HEAD
   @Inline(value = "null", constantExpression = true)
+=======
+>>>>>>> eb08f408c19f47229d135b93fc33d11884ebe328
   public float mas2screen(final float size) {
     return size;
   }
@@ -371,7 +380,11 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
     if ((shape instanceof Circle2f)) {
       Circle2f circle = ((Circle2f)shape);
       Point2f p = this.mas2screen(((Circle2f)shape).getCenter());
+<<<<<<< HEAD
       float radius = null;
+=======
+      float radius = this.mas2screen(circle.getRadius());
+>>>>>>> eb08f408c19f47229d135b93fc33d11884ebe328
       float _x = p.getX();
       float _minus = (_x - radius);
       float _y = p.getY();
@@ -386,8 +399,13 @@ public abstract class AbstractFrameworkGUI extends JFrame implements FrameworkGU
       Point2f u = this.mas2screen(rect.getUpper());
       float _min = Math.min(l.getX(), u.getX());
       float _min_1 = Math.min(l.getY(), u.getY());
+<<<<<<< HEAD
       float _mas2screen = null;
       float _mas2screen_1 = null;
+=======
+      float _mas2screen = this.mas2screen(rect.getWidth());
+      float _mas2screen_1 = this.mas2screen(rect.getHeight());
+>>>>>>> eb08f408c19f47229d135b93fc33d11884ebe328
       return new Rectangle2D.Float(
         ((float) _min), 
         ((float) _min_1), _mas2screen, _mas2screen_1);

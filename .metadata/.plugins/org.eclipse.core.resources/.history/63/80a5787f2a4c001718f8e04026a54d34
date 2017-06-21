@@ -1,0 +1,25 @@
+/** 
+ * 
+ */
+package environment
+
+import java.util.Map
+import java.util.UUID
+
+/** 
+ * @author AG
+ * 
+ */
+class Edge {
+	val origin : Node
+	val destination : Node
+	var objects : Map<UUID, EnvObject>
+	var weight : int
+	
+	new(origin : Node, destination : Node) {
+		this.origin = origin
+		this.destination = destination
+	}
+	
+	
+}

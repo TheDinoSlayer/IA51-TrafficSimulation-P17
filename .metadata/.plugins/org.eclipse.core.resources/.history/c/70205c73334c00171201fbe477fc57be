@@ -1,0 +1,33 @@
+package environment
+
+import java.util.LinkedList
+import java.util.HashMap
+import java.util.List
+
+/** 
+ * @author AG
+ * 
+ */
+class Graph {
+	val edges : Map<Edge, List<Edge>>
+	val nodes = new HashMap<Node, List<Node>>
+	
+	new {
+		this.edges = new HashMap<>()
+	}
+	
+	def addEdge(origin : Node, destination : Node) {
+		val edge = new Edge(origin, destination)
+		
+		origin.outgoing.add(edge)
+		destination.incoming.add(edge)
+		
+		
+	}
+	
+	def addNode(node : Node) {
+		if(!this.nodes.containsKey(node)) {
+			
+		}
+	}
+}

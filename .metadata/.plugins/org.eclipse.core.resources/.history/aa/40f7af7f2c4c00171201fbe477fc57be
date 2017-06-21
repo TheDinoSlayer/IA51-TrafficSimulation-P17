@@ -1,0 +1,25 @@
+/** 
+ * 
+ */
+package environment
+
+import fr.utbm.info.ia51.framework.math.Point2f
+import java.util.UUID
+
+/** 
+ * @author AG
+ * 
+ */
+class EnvObject {
+	var id : UUID
+	val position = new Point2f
+	
+	def getPosition : Point2f {
+		this.position
+	}
+	
+	def setPosition(position : Point2f) {
+		this.position.x = position.x
+		this.position.y = position.y
+	}
+}
