@@ -256,9 +256,6 @@ public class AgentBody extends AbstractMobileObject implements Body, MoveBody {
       ArrayList<Influence> _arrayList = new ArrayList<Influence>();
       this.otherInfluences = _arrayList;
       for (final Influence i : otherInfluences) {
-        if (i!=null) {
-          i.setEmitter(this.getID());
-        }
       }
       _xblockexpression = otherInfluences;
     }
@@ -275,9 +272,6 @@ public class AgentBody extends AbstractMobileObject implements Body, MoveBody {
     {
       MotionInfluence mi = this.motionInfluence;
       this.motionInfluence = null;
-      if (mi!=null) {
-        mi.setEmitter(this.getID());
-      }
       _xblockexpression = mi;
     }
     return _xblockexpression;

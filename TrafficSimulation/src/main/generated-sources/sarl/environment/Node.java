@@ -7,6 +7,7 @@ import io.sarl.lang.annotation.SarlSpecification;
 import io.sarl.lang.annotation.SyntheticMember;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 import org.eclipse.xtext.xbase.lib.Pure;
 
@@ -23,6 +24,12 @@ public class Node {
   
   private Map<UUID, EnvObject> objects;
   
+  private String name;
+  
+  public Node(final String name) {
+    this.name = name;
+  }
+  
   @Pure
   public HashSet<Edge> getOutgoing() {
     return this.outgoing;
@@ -38,10 +45,25 @@ public class Node {
     return this.objects;
   }
   
+  @Pure
+  public String getName() {
+    return this.name;
+  }
+  
   @Override
   @Pure
   @SyntheticMember
   public boolean equals(final Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Node other = (Node) obj;
+    if (!Objects.equals(this.name, other.name)) {
+      return false;
+    }
     return super.equals(obj);
   }
   
@@ -50,11 +72,8 @@ public class Node {
   @SyntheticMember
   public int hashCode() {
     int result = super.hashCode();
+    final int prime = 31;
+    result = prime * result + Objects.hashCode(this.name);
     return result;
-  }
-  
-  @SyntheticMember
-  public Node() {
-    super();
   }
 }

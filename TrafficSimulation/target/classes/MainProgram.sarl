@@ -2,7 +2,6 @@ import fr.utbm.info.ia51.framework.FrameworkLauncher
 import fr.utbm.info.ia51.framework.gui.BehaviorTypeSelector
 import environment.WorldModel
 import java.util.List
-import environment.WorldModel
 import GUI.Gui
 import ^agent.Car
 
@@ -18,7 +17,7 @@ agent MainProgram extends FrameworkLauncher{
 	val WORLD_SIZE_X = 700f
 	val WORLD_SIZE_Y = 700f
 	val NUMBER_CARS = 1
-	
+
 		
 	override initializeSimulation(parameters : List<Object>) : boolean {
 		var type = BehaviorTypeSelector.open

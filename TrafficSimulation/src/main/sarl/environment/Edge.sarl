@@ -14,7 +14,6 @@ class Edge {
 	val origin : Node
 	val destination : Node
 	var objects :  Map<UUID, EnvObject>
-	//var weight : int
 	
 	new(origin : Node, destination : Node) {
 		this.origin = origin

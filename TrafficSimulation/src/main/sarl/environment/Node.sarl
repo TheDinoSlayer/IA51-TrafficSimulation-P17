@@ -15,6 +15,11 @@ class Node {
 	val outgoing = new HashSet<Edge>
 	val incoming = new HashSet<Edge>
 	var objects : Map<UUID, EnvObject>
+	var name : String
+	
+	new(name : String) {
+		this.name = name	
+	}
 	
 	def getOutgoing	: HashSet<Edge> {
 		this.outgoing
@@ -26,5 +31,9 @@ class Node {
 	
 	def getObjects : Map<UUID, EnvObject> {
 		this.objects
+	}
+	
+	def getName : String {
+		this.name
 	}
 }

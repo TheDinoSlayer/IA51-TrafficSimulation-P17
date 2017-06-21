@@ -2,22 +2,24 @@
  * 
  */
 package GUI
-import javax.swing.*;
+
 import fr.utbm.info.ia51.framework.gui.AbstractFrameworkGUI
-import fr.utbm.info.ia51.framework.util.Resources
-import java.awt.Graphics2D
 import fr.utbm.info.ia51.framework.math.Point2f
 import fr.utbm.info.ia51.framework.math.Vector2f
+import fr.utbm.info.ia51.framework.time.TimeManager
+import fr.utbm.info.ia51.framework.util.Resources
+import java.awt.Graphics2D
 import java.awt.Shape
 import java.io.Serializable
-import fr.utbm.info.ia51.framework.time.TimeManager
+import javax.swing.Icon
+import javax.swing.ImageIcon
 
 /** 
  * @author Quan
  * 
  */
 public class Gui extends AbstractFrameworkGUI{
-	
+		
 	static val DIRECTION_RADIUS = 30f
 	
 	static var CAR_ICON : Icon
@@ -34,7 +36,11 @@ public class Gui extends AbstractFrameworkGUI{
 
 	new (worldWidth : float, worldHeight : float, timeManager : TimeManager) {
 		super("Project with traffic simulation",
+<<<<<<< HEAD
+				worldWidth, worldHeight, Resources::getResource(typeof(Gui), "icon.png"), // $NON-NLS-1$
+=======
 				worldWidth, worldHeight, Resources::getResource(typeof(Gui), "map.png"), // $NON-NLS-1$
+>>>>>>> 8436a7b7387d3cfc1c155c58407c2644c8546621
 		timeManager)
 	}
 

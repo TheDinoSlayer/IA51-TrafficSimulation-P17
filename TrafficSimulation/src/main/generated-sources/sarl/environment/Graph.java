@@ -60,6 +60,21 @@ public class Graph {
     return _xblockexpression;
   }
   
+  @Pure
+  public LinkedList<Node> getNodes() {
+    return this.nodes;
+  }
+  
+  @Pure
+  public Node getNode(final int index) {
+    return this.nodes.get(index);
+  }
+  
+  @Pure
+  public LinkedList<Edge> getEdges() {
+    return this.edges;
+  }
+  
   @Override
   @Pure
   @SyntheticMember
