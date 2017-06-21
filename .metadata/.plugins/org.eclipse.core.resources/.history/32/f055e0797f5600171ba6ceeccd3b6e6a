@@ -1,0 +1,12 @@
+/** 
+ * 
+ */
+/** 
+ * @author AG
+ * 
+ */
+class MainTest {
+	def main(args : String[]) : void {
+		
+	}
+}

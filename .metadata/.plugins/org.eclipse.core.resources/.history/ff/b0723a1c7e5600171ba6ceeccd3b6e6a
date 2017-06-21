@@ -1,0 +1,53 @@
+/** 
+ * 
+ */
+package GUI
+import javax.swing.*;
+import fr.utbm.info.ia51.framework.gui.AbstractFrameworkGUI
+import fr.utbm.info.ia51.framework.util.Resources
+import java.awt.Graphics2D
+import fr.utbm.info.ia51.framework.math.Point2f
+import fr.utbm.info.ia51.framework.math.Vector2f
+import java.awt.Shape
+import java.io.Serializable
+import fr.utbm.info.ia51.framework.time.TimeManager
+
+/** 
+ * @author Quan
+ * 
+ */
+public class Gui extends AbstractFrameworkGUI{
+		
+	static val DIRECTION_RADIUS = 30f
+	
+	static var CAR_ICON : Icon
+	static var ICON_WIDTH : int
+	static var ICON_HEIGHT : int
+	
+	static val FAKE = {
+		var url = Resources.getResource(typeof(Gui), "car.png")
+		CAR_ICON = new ImageIcon(url)
+		ICON_WIDTH  = CAR_ICON.iconWidth
+		ICON_HEIGHT = CAR_ICON.iconHeight
+		null
+	}
+
+	new (worldWidth : float, worldHeight : float, timeManager : TimeManager) {
+		super("Project with traffic simulation",
+				worldWidth, worldHeight, Resources::getResource(typeof(Gui), "icon.png"), // $NON-NLS-1$
+		timeManager)
+	}
+
+	protected override isMouseCursorHidden : boolean {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	override paintAgentBody(g2d : Graphics2D, positionOnScreen : Point2f, orientationOnScreen : Vector2f, shape : Shape, type : Serializable, name : String, positionInMas : Point2f, frustum : Shape) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+	override paintSituatedObject(g2d : Graphics2D, positionOnScreen : Point2f, orientationOnScreen : Vector2f, shape : Shape, type : Serializable, name : String, positionInMas : Point2f) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+	
+}

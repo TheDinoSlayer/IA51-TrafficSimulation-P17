@@ -170,7 +170,7 @@ class AgentBody extends AbstractMobileObject implements Body, MoveBody {
 		var otherInfluences = this.otherInfluences
 		this.otherInfluences = new ArrayList
 		for(i : otherInfluences) {
-			i?.setEmitter(ID)
+			//i?.setEmitter(ID)
 		}
 		otherInfluences
 	}
@@ -182,7 +182,7 @@ class AgentBody extends AbstractMobileObject implements Body, MoveBody {
 	package def consumeMotionInfluence : MotionInfluence {
 		var mi = this.motionInfluence
 		this.motionInfluence = null
-		mi?.setEmitter(ID)
+		//mi?.setEmitter(ID)
 		mi
 	}
 

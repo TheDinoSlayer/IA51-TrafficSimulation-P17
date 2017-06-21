@@ -1,0 +1,12 @@
+/** 
+ * 
+ */
+package ^capacity
+
+/** 
+ * @author AG
+ * 
+ */
+capacity Alarm {
+	def emitAlarm() : void
+}

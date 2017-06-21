@@ -1,0 +1,14 @@
+/** 
+ * 
+ */
+package environment.staticenv
+
+import environment.EnvObject
+
+/** 
+ * @author AG
+ * 
+ */
+class BusStation extends EnvObject {
+	
+}

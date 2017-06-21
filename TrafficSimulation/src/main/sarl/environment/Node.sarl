@@ -23,7 +23,7 @@ class Node {
 	def getIncoming : HashSet<Edge> {
 		this.incoming
 	}
-	
+
 	def getObjects : Map<UUID, EnvObject> {
 		this.objects
 	}

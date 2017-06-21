@@ -1,0 +1,13 @@
+/** 
+ * 
+ */
+package environment.staticenv.sign
+/** 
+ * @author AG
+ * 
+ */
+enum SignType {
+	PROHIBITION,
+	STOP,
+	GIVE_WAY
+}
