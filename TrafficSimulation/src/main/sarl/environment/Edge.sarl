@@ -23,7 +23,7 @@ class Edge {
 	def getOrigin : Node {
 		this.origin
 	}
-
+	
 	def getDestination : Node {
 		this.destination
 	}

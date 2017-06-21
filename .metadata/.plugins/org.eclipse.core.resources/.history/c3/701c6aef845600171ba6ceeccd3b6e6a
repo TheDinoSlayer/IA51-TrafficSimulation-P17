@@ -1,0 +1,33 @@
+/** 
+ * 
+ */
+package environment
+
+import java.util.Map
+import java.util.UUID
+import java.util.HashSet
+
+/** 
+ * @author AG
+ * 
+ */
+class Node {
+	val outgoing = new HashSet<Edge>
+	val incoming = new HashSet<Edge>
+	var objects : Map<UUID, EnvObject>
+	var name : String
+	
+	
+	
+	def getOutgoing	: HashSet<Edge> {
+		this.outgoing
+	}
+	
+	def getIncoming : HashSet<Edge> {
+		this.incoming
+	}
+	
+	def getObjects : Map<UUID, EnvObject> {
+		this.objects
+	}
+}

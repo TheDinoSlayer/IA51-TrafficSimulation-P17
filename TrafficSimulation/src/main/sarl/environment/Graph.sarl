@@ -36,4 +36,16 @@ class Graph {
 		this.addNode(inNode)
 		this.addEdge(node, inNode)
 	}
+	
+	def getNodes : LinkedList<Node> {
+		this.nodes
+	}
+	
+	def getNode(index : int) : Node {
+		this.nodes.get(index)
+	}
+	
+	def getEdges : LinkedList<Edge> {
+		this.edges
+	}
 }

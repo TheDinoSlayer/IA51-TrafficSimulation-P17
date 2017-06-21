@@ -1,0 +1,18 @@
+import environment.Graph
+import environment.Node
+import environment.Edge
+
+/** 
+ * 
+ */
+/** 
+ * @author AG
+ * 
+ */
+class MainTest {
+	def main(args : String[]) : void {
+		val graph = new Graph
+		
+		val node1 = new Node
+	}
+}

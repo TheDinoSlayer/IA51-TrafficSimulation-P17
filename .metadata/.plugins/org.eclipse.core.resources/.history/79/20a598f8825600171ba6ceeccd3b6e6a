@@ -1,0 +1,15 @@
+import environment.Graph
+
+/** 
+ * 
+ */
+/** 
+ * @author AG
+ * 
+ */
+class MainTest {
+	def main(args : String[]) : void {
+		val graph = new Graph
+		
+	}
+}
