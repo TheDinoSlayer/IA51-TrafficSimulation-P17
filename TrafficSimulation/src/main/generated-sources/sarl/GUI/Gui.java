@@ -11,10 +11,7 @@ import io.sarl.lang.annotation.SyntheticMember;
 import java.awt.Graphics2D;
 import java.awt.Shape;
 import java.io.Serializable;
-import java.net.URL;
 import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import org.eclipse.xtext.xbase.lib.Functions.Function0;
 import org.eclipse.xtext.xbase.lib.Pure;
 
 /**
@@ -31,21 +28,6 @@ public class Gui extends AbstractFrameworkGUI {
   private static int ICON_WIDTH;
   
   private static int ICON_HEIGHT;
-  
-  private final static Object FAKE = new Function0<Object>() {
-    public Object apply() {
-      Object _xblockexpression = null;
-      {
-        URL url = Resources.getResource(Gui.class, "car.png");
-        ImageIcon _imageIcon = new ImageIcon(url);
-        Gui.CAR_ICON = _imageIcon;
-        Gui.ICON_WIDTH = Gui.CAR_ICON.getIconWidth();
-        Gui.ICON_HEIGHT = Gui.CAR_ICON.getIconHeight();
-        _xblockexpression = null;
-      }
-      return _xblockexpression;
-    }
-  }.apply();
   
   public Gui(final float worldWidth, final float worldHeight, final TimeManager timeManager) {
     super("Project with traffic simulation", worldWidth, worldHeight, Resources.getResource(Gui.class, "map.png"), timeManager);
@@ -68,5 +50,5 @@ public class Gui extends AbstractFrameworkGUI {
   }
   
   @SyntheticMember
-  private final static long serialVersionUID = 4930183833L;
+  private final static long serialVersionUID = 4928033604L;
 }

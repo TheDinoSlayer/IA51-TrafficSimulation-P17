@@ -31,7 +31,8 @@ agent MainProgram extends FrameworkLauncher{
 			var gui = new Gui(WORLD_SIZE_X, WORLD_SIZE_Y, environment.timeManager)
 
 			return initializeSimulation(environment, type, gui, parameters)[typeof(Car)]
-		} else {
+		} 
+		else {
 			return false
 		}	
 	}	
